@@ -10,6 +10,8 @@ RUN which chmod
 
 RUN pwd
 
+RUN cp /index.html /usr/local/apache2/htdocs/.
+
 RUN cat /init.sh
 
 RUN chmod +x /init.sh
