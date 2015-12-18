@@ -1,16 +1,18 @@
 #!/bin/bash
 
-#build=$(cat build)
+cd /
 
-#sed -i -e "s|<containerid>|$(hostname)|g"  \
-#       -e "s|<build>|$build|g"       \
-#       /usr/share/html/index.html
+build=$(cat build)
 
-#PASSVAL=`grep PASSWORD /password | cut -d= -f2`
+sed -i -e "s|<containerid>|$(hostname)|g"  \
+       -e "s|<build>|$build|g"       \
+       /usr/local/apache2/htdocs/index.html
 
-#sed -i "s/PASSWORD/$PASSVAL/g" /usr/share/html/index.html
+PASSVAL=`grep PASSWORD /password | cut -d= -f2`
 
-echo "Hi, I'm in init.sh"
-while [ "1" -eq "1" ]; do sleep 60; done
+sed -i "s/PASSWORD/$PASSVAL/g" /usr/local/apache2/htdocs/index.html
 
-#exec nginx -g 'daemon off;'
+#echo "Hi, I'm in init.sh"
+#while [ "1" -eq "1" ]; do sleep 60; done
+
+ENTRYPOINT ["/usr/local/apache2/sbin/httpd", "-D", "FOREGROUND"]
