@@ -18,4 +18,4 @@ RUN chmod +x /init.sh
 
 #CMD ["/init.sh"]
 
-/usr/local/apache2/bin/httpd -DFOREGROUND
+RUN /usr/local/apache2/bin/httpd -DFOREGROUND
