@@ -16,4 +16,6 @@ RUN chmod +x /init.sh
 
 #ENTRYPOINT ["/usr/local/apache2/sbin/httpd", "-D", "FOREGROUND"]
 
-CMD ["/init.sh"]
+#CMD ["/init.sh"]
+
+/usr/local/apache2/bin/httpd -DFOREGROUND
