@@ -20,7 +20,7 @@
               { 
                   "containerPath": "/opt/httpd/conf", 
                   "hostPath": "/mnt/nfs-test/httpd/conf/docker-pilot.dsc", 
-                  "mode": "RO" 
+                  "mode": "RW" 
               }
             ]
     },
