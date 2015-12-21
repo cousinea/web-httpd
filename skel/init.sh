@@ -16,4 +16,5 @@ mount | grep opt
 
 ls -l /opt/httpd/conf/httpd.conf
 
-/usr/local/apache2/bin/httpd -DFOREGROUND -f /opt/httpd/conf/httpd.conf
+#/usr/local/apache2/bin/httpd -DFOREGROUND -f /opt/httpd/conf/httpd.conf
+/usr/local/apache2/bin/httpd -DFOREGROUND 
