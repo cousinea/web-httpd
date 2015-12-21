@@ -12,4 +12,4 @@ PASSVAL=`grep PASSWORD /password | cut -d= -f2`
 
 sed -i "s/PASSWORD/$PASSVAL/g" /usr/local/apache2/htdocs/index.html
 
-/usr/local/apache2/bin/httpd -DFOREGROUND
+/usr/local/apache2/bin/httpd -DFOREGROUND -f /opt/httpd/conf/docker-pilot.dsc/httpd.conf
