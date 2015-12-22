@@ -12,9 +12,9 @@ PASSVAL=`grep PASSWORD /password | cut -d= -f2`
 
 sed -i "s/PASSWORD/$PASSVAL/g" /usr/local/apache2/htdocs/index.html
 
-mount | grep opt
-
 ls -l /usr/local/httpd/conf/httpd.conf
+ls -l /usr/local/httpd/conf/extra/httpd-ssl.conf
+ls -l /usr/local/httpd/conf
 
 /usr/local/apache2/bin/httpd -DFOREGROUND -f /usr/local/httpd/conf/httpd.conf
 #/usr/local/apache2/bin/httpd -DFOREGROUND 
