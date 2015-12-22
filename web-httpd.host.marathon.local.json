@@ -18,7 +18,7 @@
         },
         "volumes": [
               { 
-                  "containerPath": "/opt/httpd/conf", 
+                  "containerPath": "/usr/local/httpd/conf", 
                   "hostPath": "/mnt/nfs-test/httpd/conf/docker-pilot.dsc", 
                   "mode": "RW" 
               }
